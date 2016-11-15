@@ -1,0 +1,4 @@
+var id = <%= @memoid %>;
+var updateId = document.getElementById(id);
+$(updateId).text("<%= @memo.memo %>");
+$('.my-form').hide();

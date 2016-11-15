@@ -1,0 +1,15 @@
+<div class="memo">
+  <h1> MEMO LIST </h1>
+  <ul class="memo-list"">
+    <% @memos.each do |memo| %>
+      <li class=<%= memo.id %>><div id=<%= memo.id %> data-id=<%= memo.id %> ><%= memo.memo %></div><%= link_to 'EDIT', edit_memo_path(memo), remote: true, class: "edit_button", style: "padding-left: 10px" %><%= link_to '刪除', memo_path(memo), method: :delete, style: "padding-left: 10px", class: "del_button", remote: true %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+<%= link_to '新增memo', new_memo_path, remote: true %>
+
+<div class="my-form" style='display: none'>
+</div>

@@ -1,0 +1,1 @@
+<li class=<%= @memo.id %>><div id=<%= @memo.id %> data-id=<%= @memo.id %> ><%= @memo.memo %></div><%= link_to 'EDIT', edit_memo_path(@memo), remote: true, class: "edit_button", style: "padding-left: 10px" %><%= link_to '刪除', memo_path(@memo), method: :delete, style: "padding-left: 10px", class: "del_button", remote: true %></li>
